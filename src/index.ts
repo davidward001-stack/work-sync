@@ -1,6 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3';
-import { v4 as uuidv4 } from 'crypto';
 import * as crypto from 'crypto';
 import * as dotenv from 'dotenv';
 import { Task, TaskCreateRequest, TaskUpdateRequest } from './types';
