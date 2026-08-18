@@ -1,0 +1,3 @@
+# Skip nixpacks, use Dockerfile directly
+[build]
+dockerfile = "Dockerfile"
