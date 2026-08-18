@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  work-sync:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: ${PORT:-3000}
+      WORK_SYNC_API_KEY: ${WORK_SYNC_API_KEY}
+      R2_ENDPOINT: ${R2_ENDPOINT}
+      R2_BUCKET: ${R2_BUCKET}
+      R2_KEY_ID: ${R2_KEY_ID}
+      R2_SECRET: ${R2_SECRET}
+    restart: unless-stopped
